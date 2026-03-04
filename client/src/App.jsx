@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Header from './components/layout/Header';
 import Home             from './pages/Home';
+import Contact from './pages/Contact'; 
 import CityGuide        from './pages/CityGuide';
 import RestaurantDetail from './pages/RestaurantDetail';
 import Login            from './pages/Login';
@@ -25,6 +26,7 @@ function AppRoutes() {
           <Route path="/restaurant/:ville/:id"     element={<RestaurantDetail />} />
           <Route path="/login"                     element={<Login />} />
           <Route path="/signup"                    element={<Signup />} />
+	  <Route path="/contact" element={<Contact />} /> 
           <Route path="/profil"                    element={<PrivateRoute><Profil /></PrivateRoute>} />
           <Route path="*"                          element={<Navigate to="/" replace />} />
         </Routes>
